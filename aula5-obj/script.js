@@ -19,7 +19,7 @@ function escopo(){
 
         console.log(pessoas);
 
-        resultado.innerHTML += `${nome.value} ${sobrenome.value} ${peso.value} ${altura.value} <br>`
+        resultado.innerHTML += `${nome.value} ${sobrenome.value} ${peso.value} ${altura.value} <br>`    
     }
     form.addEventListener('submit', RecebeEvento);
 }
