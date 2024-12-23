@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 app.get('/contato', (req, res) => {
     res.send('Pagina de contato')
 })
+
 app.listen(porta, () => {
     console.log(`Servidor iniciado na porta ${porta}`)
 });
