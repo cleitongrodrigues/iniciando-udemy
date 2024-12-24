@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
 const porta = 3000;
+const routes = require('./routes');
+const path = require('path');
 
-app.get('/', (req, res) => {
-    res.send('Hello world!');
-});
+app.use(express.urlencoded({extended: true}));
 
-app.get('/contato', (req, res) => {
-    res.send('Pagina de contato')
-})
+app.set('views', path.resolve(__dirname, 'src','views'));
+app.set('view engine', 'ejs');
+
+app.use(routes);
 
 app.listen(porta, () => {
     console.log(`Servidor iniciado na porta ${porta}`)
