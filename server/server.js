@@ -3,6 +3,9 @@ const app = express();
 const porta = 3000;
 const routes = require('./routes');
 const path = require('path');
+const mongoose = require('mongoose');
+
+mongoose.connect()
 
 app.use(express.urlencoded({extended: true}));
 
